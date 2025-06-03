@@ -56,7 +56,7 @@ NODE_ENV=development
 chage baseurl in frontend > service > authservice.js file for locally run the project
 baseURL: "http://localhost:3000/api",
 
-
+same in utils folder
 
 
 
