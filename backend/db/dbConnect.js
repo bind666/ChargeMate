@@ -15,8 +15,12 @@ async function dbConnect() {
         mongoose.connection.on("error", (err) => {
             console.log(`database connection error`, err);
         })
+        console.log("✅ Final DB_URI:", process.env.DB_URI);
+        await mongoose.connect(config.DB_URI, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        });
 
-        await mongoose.connect(config.DB_URI)
 
     } catch (error) {
         console.log(`mongodb connection error`, error);
